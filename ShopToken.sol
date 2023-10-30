@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 contract ShopToken is Ownable {
     IERC20 public TOKEN;
     uint public  RATE;
-    constructor(address _token, uint _rate){
+   constructor(address _token, uint _rate, address _initialOwner) Ownable(_initialOwner){
         TOKEN = IERC20(_token);
         RATE = _rate;
     }
